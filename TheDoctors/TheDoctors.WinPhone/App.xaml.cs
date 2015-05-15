@@ -6,6 +6,7 @@ using System.Windows.Markup;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using TheDoctors.Resources;
 using TheDoctors.WinPhone.Resources;
 
 namespace TheDoctors.WinPhone

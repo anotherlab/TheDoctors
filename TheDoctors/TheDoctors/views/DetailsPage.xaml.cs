@@ -15,9 +15,9 @@ namespace TheDoctors.views
     {
         public DetailsPage(DoctorActor doctor)
         {
-            // On the iPhone, we just want to show the previous page title.  The default would have included the current page
-            // title and it would have looked messy
-            Title = Device.OnPlatform("", LocalizationResources.DetailsTitle, LocalizationResources.DetailsTitle);
+            // On the iPhone, we just want to show the previous page title. The default would have 
+            // included the current page title and it would have looked messy
+            Title = Device.OnPlatform("", DoctorResource.DetailsTitle, DoctorResource.DetailsTitle);
 
             BindingContext = doctor;
 

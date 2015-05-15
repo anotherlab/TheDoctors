@@ -11,6 +11,16 @@
       <local:ImageResourceConverter x:Key="imageResourceCvt" />
     </ResourceDictionary>
   </ContentPage.Resources>
+  <StackLayout>
+    <Label Text="{l10n:TranslateUpper ApplicationTitle}">
+      <Label.IsVisible>
+        <OnPlatform x:TypeArguments="x:Boolean"
+                    iOS="False"
+                    Android="False"
+                    WinPhone="True"
+                    />
+      </Label.IsVisible>
+    </Label>
 
   <ListView x:Name="DoctorsList" ItemsSource="{Binding .}"
             ItemTapped="OnItemTapped"
@@ -43,4 +53,5 @@
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>
+  </StackLayout>
 </ContentPage>

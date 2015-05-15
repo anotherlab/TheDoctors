@@ -6,7 +6,7 @@ namespace TheDoctors.Resources
 {
     // Define the default content property
     [ContentProperty("Text")]
-    public class TranslateExtension : IMarkupExtension
+    public class TranslateUpperExtension : IMarkupExtension
     {
         public string Text { get; set; }
 
@@ -15,7 +15,7 @@ namespace TheDoctors.Resources
             if (Text == null)
                 return null;
 
-            return DoctorResource.ResourceManager.GetString(Text, DoctorResource.Culture);
+            return DoctorResource.ResourceManager.GetString(Text, DoctorResource.Culture).ToUpper();
         }
 
     }
